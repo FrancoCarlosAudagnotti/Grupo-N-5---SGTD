@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
- PROYECT_DIR: Codigo/SGTD/SGTD
+ PROYECT_DIR: /SGDT/WebApplication1
 
 jobs:
   build:
@@ -28,6 +28,7 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
+        working-directory: ${{ env.PROJECT_DIR }}
 
       - name: dotnet publish
         run: dotnet publish -c Release -o "${{env.GITHUB_WORKSPACE}}/myapp"
@@ -69,3 +70,4 @@ jobs:
           package: .
 
           
+
