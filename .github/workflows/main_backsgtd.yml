@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
- PROYECT_DIR: /SGDT/WebApplication1
+ PROYECT_DIR: ~/Codigo/SGDT/SGDT
 
 jobs:
   build:
@@ -69,5 +69,6 @@ jobs:
           package: .
 
           
+
 
 
